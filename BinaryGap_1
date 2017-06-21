@@ -1,0 +1,24 @@
+# you can write to stdout for debugging purposes, e.g.
+# print "this is a debug message\n";
+
+use Data::Dumper;
+sub solution {
+    my ($N)=@_;
+    #$N=529;
+    my $binary = sprintf("%b", $N);
+    #print $binary;
+    my (@foo) = split(/1/, $binary); 
+    if (substr($binary, -1) ne '1') {
+        $foo[$#foo] = undef;
+    }
+    @foo = sort {length($b) <=> length($a)} @foo;
+    #print Dumper(@foo);
+    # write your code in Perl 5.18
+    if (length($foo[0])>0) {
+        #print 'got', length($foo[0]);
+        return length($foo[0]);
+    } else {
+        #print 'got 0';
+        return 0;
+    }
+}
