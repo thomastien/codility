@@ -4,7 +4,19 @@
 
 # This version is a working solution, but fails the performance test
 
+# So turns out collections Counter runs extremely fast
+from collections import Counter
+
 def solution(A):
+    # write your code in Python 2.7
+    z = Counter(A)
+    odds = [i for i in A if z[i]%2]
+    return odds[0]
+
+    pass
+
+
+def OLDsolution(A):
     # write your code in Python 2.7
     A.sort()
     last = ''
