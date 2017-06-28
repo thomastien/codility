@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
 
-A = [1, 2, 3, 4, 5]
-A = []
+#A = [1, 2, 3, 4, 5]
+#A = []
 
 def Solution(A, K):
     for i in range(K):
